@@ -1,0 +1,4 @@
+# robots.txt — Football Academy Plus Bruma
+User-agent: *
+Allow: /
+Sitemap: https://plusbrumafc.netlify.app/sitemap.xml

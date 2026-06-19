@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make an Enquiry — Football Academy Plus Bruma</title>
+    <meta name="description" content="Make an enquiry about training sessions, products, player registration or sponsorship at Football Academy Plus Bruma in Bruma, Johannesburg.">
+    <meta name="keywords" content="football academy enquiry, register for football Johannesburg, training enquiry Plus Bruma">
+    <meta name="author" content="Football Academy Plus Bruma">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Inline style override: forces dark inputs regardless of browser defaults -->
+    <style>
+      input, input[type="text"], input[type="email"], input[type="tel"],
+      input[type="search"], input[type="date"], textarea, select {
+        background-color: #111108 !important;
+        color: #E6E6E1 !important;
+        border-color: #5C4610 !important;
+        -webkit-appearance: none !important;
+        appearance: none !important;
+      }
+      input:focus, textarea:focus, select:focus {
+        background-color: #1a1800 !important;
+        border-color: #C9A84C !important;
+        color: #F2F2ED !important;
+        outline: none !important;
+      }
+      input::placeholder, textarea::placeholder {
+        color: #444440 !important;
+        opacity: 1 !important;
+      }
+      input:-webkit-autofill, input:-webkit-autofill:focus,
+      textarea:-webkit-autofill, select:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px #1a1800 inset !important;
+        -webkit-text-fill-color: #E6E6E1 !important;
+        caret-color: #C9A84C !important;
+      }
+      select option { background-color: #161608 !important; color: #E6E6E1 !important; }
+    </style>
+
+    <!-- BROWSER INPUT COLOUR OVERRIDE: Forces dark gold theme on Chrome/Edge/Safari -->
+    <style>
+      :root { color-scheme: dark; }
+      input, textarea, select,
+      input[type="text"], input[type="email"], input[type="tel"],
+      input[type="date"], input[type="search"], input[type="number"] {
+        background: #111108 !important;
+        background-color: #111108 !important;
+        color: #E6E6E1 !important;
+        -webkit-text-fill-color: #E6E6E1 !important;
+        border-color: #5C4610 !important;
+        color-scheme: dark !important;
+      }
+      input:focus, textarea:focus, select:focus {
+        background: #1a1800 !important;
+        background-color: #1a1800 !important;
+        border-color: #C9A84C !important;
+        color: #F2F2ED !important;
+        -webkit-text-fill-color: #F2F2ED !important;
+        outline: none !important;
+        box-shadow: 0 0 0 3px rgba(201,168,76,0.18) !important;
+      }
+      input::placeholder, textarea::placeholder {
+        color: #505048 !important;
+        opacity: 1 !important;
+        -webkit-text-fill-color: #505048 !important;
+        font-style: italic;
+      }
+      input:-webkit-autofill, input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus, input:-webkit-autofill:active,
+      textarea:-webkit-autofill, select:-webkit-autofill,
+      select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 1000px #1a1800 inset !important;
+        box-shadow: 0 0 0 1000px #1a1800 inset !important;
+        -webkit-text-fill-color: #E6E6E1 !important;
+        caret-color: #C9A84C !important;
+        transition: background-color 5000s ease-in-out 0s !important;
+      }
+      select option { background: #161610 !important; color: #E6E6E1 !important; }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(75%) sepia(40%) saturate(500%) hue-rotate(5deg); cursor: pointer;
+      }
+      textarea { scrollbar-color: #5C4610 #111108; resize: vertical; }
+      textarea::-webkit-scrollbar { width: 6px; }
+      textarea::-webkit-scrollbar-track { background: #111108; }
+      textarea::-webkit-scrollbar-thumb { background: #5C4610; border-radius: 3px; }
+      input.input-error, textarea.input-error, select.input-error {
+        border-color: #E05252 !important;
+        box-shadow: 0 0 0 3px rgba(224,82,82,0.15) !important;
+      }
+      input.input-success, textarea.input-success, select.input-success {
+        border-color: #4CAF7D !important;
+        box-shadow: 0 0 0 3px rgba(76,175,125,0.12) !important;
+      }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="Home.html" class="logo"><span>Plus</span>Bruma</a>
+            <nav class="main-nav">
+                <a href="Home.html">Home</a>
+                <a href="Product.html">Product</a>
+                <a href="Sessions.html">Sessions</a>
+                <a href="About us.html">About Us</a>
+                <a href="Contact Details.html">Contact</a>
+                <a href="Enquiry.html" class="active">Enquiry</a>
+                <a href="Sign-Up.html" class="nav-signup-btn">Sign Up &#9917;</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <h1 class="section-title">Make an Enquiry</h1>
+        <p class="section-subtitle">Ask about training, products or registration</p>
+
+        <div class="enquiry-layout">
+
+            <!-- Enquiry Form — field order matches screenshot -->
+            <div class="card">
+                <p class="contact-section-title">Send Us Your Enquiry</p>
+                <form id="enquiryForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="enqName" class="form-label">Full Name <span class="req">*</span></label>
+                        <input type="text" id="enqName" name="enqName" class="form-input"
+                            placeholder="Your full name" required minlength="2"
+                            aria-required="true" aria-describedby="enqNameErr">
+                        <span class="form-error" id="enqNameErr" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enqPhone" class="form-label">Phone Number <span class="req">*</span></label>
+                        <input type="tel" id="enqPhone" name="enqPhone" class="form-input"
+                            placeholder="0XX XXX XXXX" required
+                            aria-required="true" aria-describedby="enqPhoneErr">
+                        <span class="form-error" id="enqPhoneErr" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enqEmail" class="form-label">Email Address <span class="req">*</span></label>
+                        <input type="email" id="enqEmail" name="enqEmail" class="form-input"
+                            placeholder="your@email.com" required
+                            aria-required="true" aria-describedby="enqEmailErr">
+                        <span class="form-error" id="enqEmailErr" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enqType" class="form-label">Enquiry Type <span class="req">*</span></label>
+                        <select id="enqType" name="enqType" class="form-input"
+                            required aria-required="true" aria-describedby="enqTypeErr">
+                            <option value="">— Select an enquiry type —</option>
+                            <option value="training">Training Sessions</option>
+                            <option value="product">Products &amp; Gear</option>
+                            <option value="registration">Player Registration</option>
+                            <option value="general">General Information</option>
+                        </select>
+                        <span class="form-error" id="enqTypeErr" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enqMessage" class="form-label">Your Message <span class="req">*</span></label>
+                        <textarea id="enqMessage" name="enqMessage" class="form-input form-textarea"
+                            placeholder="What would you like to know?" required minlength="10"
+                            rows="5" maxlength="500"
+                            aria-required="true" aria-describedby="enqMessageErr"></textarea>
+                        <span class="form-error" id="enqMessageErr" role="alert"></span>
+                        <p style="font-size:0.72rem; color:var(--text-muted); text-align:right; margin-top:4px;" id="enqMsgCount">0 / 500</p>
+                    </div>
+
+                    <p style="font-size:0.72rem; color:var(--text-muted); margin-bottom:var(--sp-3);"><span class="req">*</span> Required fields</p>
+                    <button type="submit" class="btn-gold" style="width:100%;">Send Enquiry →</button>
+                </form>
+            </div>
+
+            <!-- Sidebar -->
+            <div>
+                <div class="card">
+                    <p class="contact-section-title">What to Expect</p>
+                    <ul class="enq-info-list">
+                        <li>
+                            <span class="enq-icon">⚽</span>
+                            <div>
+                                <strong>Training</strong>
+                                <p>Mon–Fri, 08:00–18:00. R200 per session. All skill levels welcome.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="enq-icon">👟</span>
+                            <div>
+                                <strong>Products</strong>
+                                <p>Available at the academy. We'll send a full gear list on enquiry.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="enq-icon">📋</span>
+                            <div>
+                                <strong>Registration</strong>
+                                <p>Open for boys and girls aged 6–18. Documents sent after enquiry.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" style="margin-top:24px;">
+                    <p class="contact-section-title">Prefer to Call?</p>
+                    <p style="color:var(--text-secondary); font-size:0.92rem; line-height:1.9;">
+                        📞 <a href="tel:0848361091" style="color:var(--gold);">084 836 1091</a><br>
+                        ✉ <a href="mailto:faplusbruma@gmail.com" style="color:var(--gold);">faplusbruma@gmail.com</a>
+                    </p>
+                </div>
+                <div class="card" style="margin-top:24px; text-align:center;">
+                    <p class="contact-section-title">Not sure? Register instead</p>
+                    <p style="font-size:var(--text-xs); color:var(--text-secondary); margin-bottom:var(--sp-4); line-height:1.7;">Ready to join? Complete our full registration form and secure your spot.</p>
+                    <a href="Sign-Up.html" class="btn-gold" style="width:100%;">Sign Up / Register ⚽</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-logo">PlusBruma FA</span>
+            <span class="footer-tagline">Where Stars Are Born</span>
+            <span class="footer-copy">&copy; ST10508782</span>
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
